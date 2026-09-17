@@ -26,6 +26,8 @@ contains the answer.
 <!-- e.g. "One of my questions is about a topic only two documents mention, so
      I expect that one to be hard." -->
 
+-> This ensures that the chunks are the most relevant to the question asked.
+
 ---
 
 ## 2. Every answer names a source
@@ -35,6 +37,9 @@ Every answer the system produces names at least one source document.
 **Why this target:**
 <!-- Why all five and not four? What about your setup makes that achievable —
      or what would have to go wrong for it not to be? -->
+
+-> The setup uses source documents to produce answers. So they should be able to name and credit which document was used to produce the answer.
+
 
 ---
 
@@ -53,11 +58,16 @@ in at least 4 of 5 tries.
 <!-- What did your distances look like when you set the cutoff in Milestone 4?
      Was there a clean gap, or did the two groups overlap? -->
 
+-> This way the system only answers properly when it has actual material regarding the question.
+
 ---
 
 ## 4. Something about your chunks
 
 <!-- YOU WRITE THIS ONE.
+
+-> Every chunk sampled will stay as a full post, meaning that the chunk count will be equal to the document count.
+
 
      How would you know if your chunks were the right size? Name something
      countable or observable.
@@ -72,8 +82,7 @@ in at least 4 of 5 tries.
 
 
 **Why this target:**
-
-
+-> Keeping each post as one chunk helps with everything being kept in the same chunk and nothing will get mixed in from other posts.
 
 ---
 
@@ -81,15 +90,18 @@ in at least 4 of 5 tries.
 
 <!-- YOU WRITE THIS ONE TOO.
 
+-> For at least 4 of 5 questions, the top-ranked chunk contains the "expects" phrase in it from the document retrieved.
+
+
+
      Pick something you actually care about getting right. It could be about
      speed, about refusals, about a particular kind of question your corpus
      handles badly, about source attribution being correct rather than merely
      present — anything, as long as it names a number or an observable
      outcome. -->
 
-
-
 **Why this target:**
+-> This will ensure that the chunks retrieved are capable of giving out the right information, since the expects phrase matches and is similar.
 
 
 
