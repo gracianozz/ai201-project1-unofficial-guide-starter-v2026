@@ -102,13 +102,19 @@ The good: cheapest housing tier by about $900 a year, and the singles are real s
      visible. Milestone 4. -->
 
 **Question:**
+"How many hours a week is the workload for PHYS 130 Mechanics?"
 
 **Answer:**
 
 ```
+"The workload for PHYS 130 Mechanics is 7 hours a week, plus an additional 3 hours on lab weeks [according to course_phys_130_workload.txt and course_phys_130.txt].
+
+Sources retrieved: course_phys_130.txt, course_phys_130_workload.txt, course_stat_150_workload.txt"
 ```
 
 **My relevance cutoff:**
+
+The relevance cutoff I chose is .50. I chose this because of how the both groups distance resulted. For the questions relevant to the documents, the distance was ranged from .102 ->.360. For the out of scope questions, the distance was ranged from .787 -> .923. I chose the cutoff .50 so the effect is slightly more strict, but enough to the point that relevant or similar questions can still pass through.
 
 <!-- The number you set in config.py, and how you got there.
 

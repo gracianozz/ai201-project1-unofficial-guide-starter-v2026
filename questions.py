@@ -27,7 +27,7 @@ QUESTIONS = [
     {"question": "When are the walk in hours for the health center?", "expects": "8am-11am"},
     {"question": "What is the window for dropping a class without a penalty of W on my transcript?", "expects": "First 2 weeks"},
     {"question": "How often does the campus shuttle run on weekdays?", "expects": "Every 20 minutes"},
-    {"question": "What is the address of the student union?", "expects": "123 Main Street"},
+    {"question": "How many hours a week is the workload for PHYS 130 Mechanics?", "expects": "7 hours"},
 ]
 
 # Questions from a different world entirely. Your gate should refuse all five.
