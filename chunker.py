@@ -91,13 +91,30 @@ def split_documents(documents: list[Document]) -> list[Chunk]:
     "chunker.py::split_documents" so your README's Sample Chunks section names
     the right function. `app.py chunks` prints that string for you.
 
-    Things worth thinking about before you write any code:
-      - Are your documents short posts or long guides?
-      - Is the useful information in one sentence, or spread over a paragraph?
-      - Would splitting on paragraph breaks keep more thoughts intact than
-        splitting on a character count?
     """
-    return fallback_split(documents)
+    chunks: list[Chunk] = []
+    for doc in documents:
+        blocks = [b.strip() for b in doc.text.split("\n\n") if b.strip()]
+        if not blocks:
+            continue
+
+        title, paragraphs = blocks[0], blocks[1:]
+        if not paragraphs:
+            # A file with only a title line: keep it whole rather than drop it.
+            paragraphs = [title]
+            title = ""
+
+        for index, paragraph in enumerate(paragraphs):
+            text = f"{title}\n\n{paragraph}" if title else paragraph
+            chunks.append(
+                Chunk(
+                    text=text,
+                    source=doc.source,
+                    index=index,
+                    produced_by="chunker.py::split_documents",
+                )
+            )
+    return chunks
 
 
 def describe(chunks: list[Chunk]) -> str:
