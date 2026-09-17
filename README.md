@@ -1,6 +1,6 @@
 # The Unofficial Guide
 
-<!-- Replace this line with your name and which corpus you picked. -->
+<!-- Gustavo Graciano, Campus Life Corpus -->
 
 > **This file is your submission.** Fill it in as you go — most sections get
 > written during the milestone that produces them, not at the end.
@@ -25,12 +25,19 @@
      questions your system answers. Write it for someone who has never seen
      this repo.
 
+
      Milestone 5. -->
+
+
+-> This program answers questions based on the campus life corpus. The questions that my system answers are ranged from classes,housing, parking, and resources available. Documents regarding campus life are searched from using an algorithm with chunking to answer the question with the most relevancy.
 
 ## Chunking Strategy
 
 **Chunk size:**
+Every paragraph is made into a chunk. Each document is somewhat short and is split up into different sections.
+
 **Overlap:**
+Overlap is not used, since no sentence is cut off.
 
 <!-- What about YOUR documents made you pick these numbers? Short posts and
      long sectioned guides don't want the same chunking, and "800 seemed
@@ -41,6 +48,9 @@
      more than pretending you got it right first time.
 
      Milestone 3. -->
+
+-> For the chunk size, I chose for every paragraph to be converted into a chunk. At first, I chose for every post in every document to be a chunk on its own, but later on I found that each chunk(which is a whole document), may contain too many topics for it to be a whole chunk. When asking Claude what questions it can generate from the chunks with them being the whole document, it gave me multiple questions, which made me realize that the chunk was too big. 
+     Having every paragraph be a chunk makes it so each chunk has at most 1 topic to cover, and helps with identifying information regarding questions faster.
 
 ## Sample Chunks
 
@@ -127,7 +137,17 @@ The relevance cutoff I chose is .50. I chose this because of how the both groups
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+| How much does laundry cost in Old Brewhouse? | yes | 0.144 |
+| When are the walk in hours for the health center? | yes | 0.158|
+| What is the window for dropping a class without a W on my transcript? | yes | 0.360 |
+| How often does the campus shuttle run on weekdays? | yes | 0.182 |
+| How many hours a week is the workload for PHYS 130 Mechanics? | yes | 0.102 |
+| What is the capital of Mongolia? | no | 0.787 |
+| How do I change the oil in a diesel engine? | no | 0.923 |
+| Who won the 1994 World Cup? | no | 0.847 |
+| What is the recommended dosage of ibuprofen for a headache? | no | 0.849 |
+| How do I write a for loop in Rust? | no | 0.860 |
+
 
 ## How I Used AI
 
@@ -141,8 +161,10 @@ The relevance cutoff I chose is .50. I chose this because of how the both groups
      Milestone 5. -->
 
 **1.**
+When thinking I had my chunk size correct, I asked AI to make up possible questions that can be asked from those chunks. Claude returned multiple questions, which I then came to realize that my chunk size might be too big, since the questions were ranged differently accross different topics. I then asked Claude what best approach could I take from the current chunk size idea I had. I then came to choose chunking per paragraph. This way, the chunks are limited to at most 1 topic each, and can hold specific topics and information which makes it easier to find.
 
 **2.**
+I used AI to come up with how to actually set the algorithm for the proper chunking idea I had in mind. At first, without surprise, Claude automatically gave me code which told me was the "answer" to my question. But before actually just accepting, I asked what each line does and asked questions that could make the code better for the use. This way, I understand better on how the code works for chunking.
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
