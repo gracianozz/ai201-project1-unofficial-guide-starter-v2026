@@ -70,7 +70,7 @@ Explanation:
 <!-- YOU WRITE THIS ONE.
 
 My Criteria: 
--> All sampled 5 chunks will be read as a complete post, meaning there is one chunk per post.
+-> All sampled chunks will be paragraphs of the documents used. Each paragraph will be made into one chunk.
 
 
      How would you know if your chunks were the right size? Name something
@@ -88,7 +88,7 @@ My Criteria:
 **Why this target:**
 
 Explanation:
--> All posts will be read as chunks, this way no information is missed or can be cut off when chunking.
+-> Since each paragraph is now a chunk, each chunk now tackles about 1 topic at a time, instead of having multiple.
 
 ---
 
