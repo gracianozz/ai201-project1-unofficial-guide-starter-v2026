@@ -26,7 +26,8 @@ contains the answer.
 <!-- e.g. "One of my questions is about a topic only two documents mention, so
      I expect that one to be hard." -->
 
--> This ensures that the chunks are the most relevant to the question asked.
+Explanation:
+-> This ensures that the retrieved chunks have relevant information regarding the questions asked.
 
 ---
 
@@ -38,7 +39,8 @@ Every answer the system produces names at least one source document.
 <!-- Why all five and not four? What about your setup makes that achievable —
      or what would have to go wrong for it not to be? -->
 
--> The setup uses source documents to produce answers. So they should be able to name and credit which document was used to produce the answer.
+Explanation:
+-> All 5 should have a source document since there are documents available to choose from. Each corpora has different types of documents to choose from.
 
 
 ---
@@ -58,7 +60,8 @@ in at least 4 of 5 tries.
 <!-- What did your distances look like when you set the cutoff in Milestone 4?
      Was there a clean gap, or did the two groups overlap? -->
 
--> This way the system only answers properly when it has actual material regarding the question.
+Explanation:
+-> This helps with the model not writing anything confidently wrong and keeps the relevance updated.
 
 ---
 
@@ -66,7 +69,8 @@ in at least 4 of 5 tries.
 
 <!-- YOU WRITE THIS ONE.
 
--> Every chunk sampled will stay as a full post, meaning that the chunk count will be equal to the document count.
+My Criteria: 
+-> All sampled 5 chunks will be read as a complete post, meaning there is one chunk per post.
 
 
      How would you know if your chunks were the right size? Name something
@@ -82,7 +86,9 @@ in at least 4 of 5 tries.
 
 
 **Why this target:**
--> Keeping each post as one chunk helps with everything being kept in the same chunk and nothing will get mixed in from other posts.
+
+Explanation:
+-> All posts will be read as chunks, this way no information is missed or can be cut off when chunking.
 
 ---
 
@@ -90,7 +96,8 @@ in at least 4 of 5 tries.
 
 <!-- YOU WRITE THIS ONE TOO.
 
--> For at least 4 of 5 questions, the top-ranked chunk contains the "expects" phrase in it from the document retrieved.
+My Criteria: 
+-> Out of the 5 retrieved chunks, the top-k chunk should include the "expects" word or phrase.
 
 
 
@@ -101,7 +108,10 @@ in at least 4 of 5 tries.
      outcome. -->
 
 **Why this target:**
--> This will ensure that the chunks retrieved are capable of giving out the right information, since the expects phrase matches and is similar.
+
+Explanation:
+-> This helps with ensuring that the right answer is in the top chunk that can be used to display information.
+
 
 
 

@@ -23,11 +23,11 @@ names a target of "4 of 5", and four of three is not a thing.
 
 QUESTIONS = [
     # {"question": "...", "expects": "..."},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
+    {"question": "How much does laundry cost in Old Brewhouse?", "expects": "$1.50"},
+    {"question": "When are the walk in hours for the health center?", "expects": "8am-11am"},
+    {"question": "What is the window for dropping a class without a penalty of W on my transcript?", "expects": "First 2 weeks"},
+    {"question": "How often does the campus shuttle run on weekdays?", "expects": "Every 20 minutes"},
+    {"question": "What is the address of the student union?", "expects": "123 Main Street"},
 ]
 
 # Questions from a different world entirely. Your gate should refuse all five.
