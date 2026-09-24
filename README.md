@@ -193,15 +193,153 @@ I used AI to come up with how to actually set the algorithm for the proper chunk
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 3/5 | 3/5 | 3/5 | MISSED |
+| 2. Every answer names a source | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 4. All 5 of the sampled chunks will be paragraphs of the documents used | 5 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 5. For all 5 questions, the answer the model gives contains the expects phrase. | 5 of 5 | 2/5 | 2/5 | 2/5 | MISSED |
+
+
 
 <!-- Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
      Name the file and function that produced it. -->
+
+
+### Which dining hall has the longest wait at lunchtime? — run 1
+
+- Best distance: 0.2922 (passed the gate)
+- Sources retrieved: dining_halden_hall_followup.txt, dining_pellew_dining_hall.txt, dining_pellew_dining_hall_followup.txt, dining_the_ridgeway_cafe_followup.txt
+
+```
+Based on the provided documents, Pellew Dining Hall has the longest wait at peak lunchtime, with wait times of 12 to 18 minutes [according to dining_pellew_dining_hall.txt]. In comparison, Halden Hall has a wait of rarely more than 8 minutes [according to dining_halden_hall_followup.txt], and The Ridgeway Café has a wait of 10 to 15 minutes at 12:30 [according to dining_the_ridgeway_cafe_followup.txt].
+```
+
+### Which dining hall has the longest wait at lunchtime? — run 2
+
+- Best distance: 0.2922 (passed the gate)
+- Sources retrieved: dining_halden_hall_followup.txt, dining_pellew_dining_hall.txt, dining_pellew_dining_hall_followup.txt, dining_the_ridgeway_cafe_followup.txt
+
+```
+Based on the provided documents, Pellew Dining Hall has a peak wait time of 12 to 18 minutes [dining_pellew_dining_hall.txt]. Halden Hall has a wait time of rarely more than 8 minutes [dining_halden_hall_followup.txt]. (The Ridgeway Café is also mentioned with a wait of 10 to 15 minutes, but it is referred to as a café rather than a dining hall) [dining_the_ridgeway_cafe_followup.txt]. Therefore, Pellew Dining Hall has the longest wait [dining_pellew_dining_hall.txt].
+```
+
+### Which dining hall has the longest wait at lunchtime? — run 3
+
+- Best distance: 0.2922 (passed the gate)
+- Sources retrieved: dining_halden_hall_followup.txt, dining_pellew_dining_hall.txt, dining_pellew_dining_hall_followup.txt, dining_the_ridgeway_cafe_followup.txt
+
+```
+Based on the provided documents, Pellew Dining Hall has a peak wait time of 12 to 18 minutes [dining_pellew_dining_hall.txt]. Halden Hall has a wait time of rarely more than 8 minutes [dining_halden_hall_followup.txt]. (The Ridgeway Café is also mentioned with a 10 to 15 minute wait, but it is referred to as a café rather than a dining hall) [dining_the_ridgeway_cafe_followup.txt]. Therefore, Pellew Dining Hall has the longest wait [dining_pellew_dining_hall.txt].
+```
+
+### When are the walk in hours for the health center? — run 1
+
+- Best distance: 0.1575 (passed the gate)
+- Sources retrieved: dining_the_atrium.txt, health_center.txt, transit_walking.txt
+
+```
+The walk-in hours for the health centre are from 8:00 am to 11:00 am [according to health_center.txt].
+```
+
+### When are the walk in hours for the health center? — run 2
+
+- Best distance: 0.1575 (passed the gate)
+- Sources retrieved: dining_the_atrium.txt, health_center.txt, transit_walking.txt
+
+```
+The walk-in hours for the health centre are from 8am to 11am [According to health_center.txt].
+```
+
+### When are the walk in hours for the health center? — run 3
+
+- Best distance: 0.1575 (passed the gate)
+- Sources retrieved: dining_the_atrium.txt, health_center.txt, transit_walking.txt
+
+```
+The walk-in hours for the health centre are from 8am to 11am [according to health_center.txt].
+```
+
+### What is the window for dropping a class without a penalty of W on my transcript? — run 1
+
+- Best distance: 0.3600 (passed the gate)
+- Sources retrieved: admin_add_drop_deadline.txt, admin_grade_appeals.txt, admin_transcript_requests.txt, admin_withdrawal_deadline.txt
+
+```
+You can add or drop a course through the end of the second week without a W appearing on your transcript, as a drop after week two shows as a W [admin_add_drop_deadline.txt].
+```
+
+### What is the window for dropping a class without a penalty of W on my transcript? — run 2
+
+- Best distance: 0.3600 (passed the gate)
+- Sources retrieved: admin_add_drop_deadline.txt, admin_grade_appeals.txt, admin_transcript_requests.txt, admin_withdrawal_deadline.txt
+
+```
+You can drop a class through the end of the second week without a "W" appearing on your transcript, as a drop after week two results in a "W" [admin_add_drop_deadline.txt].
+```
+
+### What is the window for dropping a class without a penalty of W on my transcript? — run 3
+
+- Best distance: 0.3600 (passed the gate)
+- Sources retrieved: admin_add_drop_deadline.txt, admin_grade_appeals.txt, admin_transcript_requests.txt, admin_withdrawal_deadline.txt
+
+```
+[According to admin_add_drop_deadline.txt], dropping a course can be done through the end of week six, but any drop after week two will show as a W on your transcript. Therefore, the window to drop a class without a W on your transcript is through the end of the second week [admin_add_drop_deadline.txt].
+```
+
+### How many dorms let you pay for laundry with coins? — run 1
+
+- Best distance: 0.4317 (passed the gate)
+- Sources retrieved: housing_aldridge_hall.txt, housing_morrow_house_laundry.txt, housing_old_brewhouse.txt, housing_old_brewhouse_laundry.txt
+
+```
+Based on the provided documents, Old Brewhouse requires coins for laundry [housing_old_brewhouse.txt, housing_old_brewhouse_laundry.txt]. Morrow House accepts coins or cards [housing_morrow_house_laundry.txt].
+```
+
+### How many dorms let you pay for laundry with coins? — run 2
+
+- Best distance: 0.4317 (passed the gate)
+- Sources retrieved: housing_aldridge_hall.txt, housing_morrow_house_laundry.txt, housing_old_brewhouse.txt, housing_old_brewhouse_laundry.txt
+
+```
+Based on the provided documents, there are two dorms—Old Brewhouse and Morrow House—that accept coins for laundry [according to housing_old_brewhouse.txt, housing_old_brewhouse_laundry.txt, and housing_morrow_house_laundry.txt].
+```
+
+### How many dorms let you pay for laundry with coins? — run 3
+
+- Best distance: 0.4317 (passed the gate)
+- Sources retrieved: housing_aldridge_hall.txt, housing_morrow_house_laundry.txt, housing_old_brewhouse.txt, housing_old_brewhouse_laundry.txt
+
+```
+Based on the provided documents, Old Brewhouse requires coins for laundry (costing $1.50 for a wash and $1.50 for a dry) [housing_old_brewhouse.txt, housing_old_brewhouse_laundry.txt]. Morrow House also takes coins (along with cards) for laundry [housing_morrow_house_laundry.txt]. This means two dorms (Old Brewhouse and Morrow House) let you pay with coins [housing_old_brewhouse.txt, housing_old_brewhouse_laundry.txt, housing_morrow_house_laundry.txt].
+```
+
+### Which dorms use app-based laundry? — run 1
+
+- Best distance: 0.4797 (passed the gate)
+- Sources retrieved: housing_aldridge_hall_laundry.txt, housing_innisfree_hall_laundry.txt, housing_old_brewhouse.txt, housing_old_brewhouse_laundry.txt
+
+```
+I do not have enough information to answer the question about which dorms use app-based laundry.
+```
+
+### Which dorms use app-based laundry? — run 2
+
+- Best distance: 0.4797 (passed the gate)
+- Sources retrieved: housing_aldridge_hall_laundry.txt, housing_innisfree_hall_laundry.txt, housing_old_brewhouse.txt, housing_old_brewhouse_laundry.txt
+
+```
+I do not have enough information to answer the question, as the provided documents do not mention which dorms use app-based laundry.
+```
+
+### Which dorms use app-based laundry? — run 3
+
+- Best distance: 0.4797 (passed the gate)
+- Sources retrieved: housing_aldridge_hall_laundry.txt, housing_innisfree_hall_laundry.txt, housing_old_brewhouse.txt, housing_old_brewhouse_laundry.txt
+
+```
+I do not have enough information to answer the question about which dorms use app-based laundry.
+```
 
 ## Verdicts
 
@@ -214,13 +352,14 @@ I used AI to come up with how to actually set the algorithm for the proper chunk
 
      Milestone 2. -->
 
-| # | Criterion | Verdict | How I decided |
+| # | Criterion | Verdict | How I decided | 
 |---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| 1 | Retrieved chunk contains the answer | MET | Using the sources that were retrieved and displayed, I checked whether the file holds the answer that was in it. Each of the five questions accross all 3 runs contained the right file. |
+| 2 | Every answer names a source | MET | In each of the answers, it has a 'Sources Retrieved' and a 'According to' section that displays the different sources used to display the answer.   |
+| 3 | Gate stops out-of-corpus questions  | MET | By reading the Out-of-Scope questions in the results file and ensuring their distance does not pass the relevance cutoff and is shown as "refused", I was able to confirm that the gate works properly.
+| 4 | All of the 5 sampled chunks will be paragraphs of each of the documents used. Each paragraph will be made into one chunk. | MET | Using the command "python app.py chunks" it helped with checking if the chunking method I implemented worked, and all were shown as full paragraphs with no cutoffs. |
+| 5 | For all 5 questions, the answer the model gives contains the expects phrase. | MISSED | Checking each answer for each run, only 2 of the 5 questions in each run had the "expects" phrase in their answers.  |
+
 
 ## Diagnoses
 
@@ -242,11 +381,22 @@ I used AI to come up with how to actually set the algorithm for the proper chunk
 
      Milestone 3. -->
 
+At first, I had questions that were too easy to answer. This made it so all questions and there were no misses. Each question basically had a straightforward answer that was easily found in the files of the campus corpus.
+
+I focused on changing a few of my questions, the wording, and the expects phrases to be shorter. This way the questions could be deemed harder and find any improvements that could be needed. I also changed some of my criteria to be better measured. 
+
+Question 4 ,"How many dorms let you pay for laundry with coins?", failed at the 5th criterion because of the generation by the model. In the 3 runs for this question, each ran similarly and used similar chunks to help with displaying an answer. The only difference is, when the answer was displayed, it did not contain the expects phrase, and also was partially correct or answered the question incorrectly. 
+
+I wanted to see if there could be any other questions that I can change to find any possible errors, and I also found that question 5:
+
 ## The Improvement
 
 **What I changed:**
+I added an extra rule for the grounding prompt in generate.py
+
 
 **Why I picked it:**
+This was a miss that could have been avoided,
 
 <!-- Connect it to a specific diagnosis above in one sentence. If you can't,
      you picked a fix because it sounded impressive. -->

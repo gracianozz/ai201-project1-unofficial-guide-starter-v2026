@@ -83,7 +83,9 @@ My Criteria:
        - "No chunk is shorter than 200 characters, since anything below that
           in my corpus turned out to be a heading with no content under it." -->
 
-
+Original: All sampled chunks will be paragraphs of the documents used. Each paragraph will be made into one chunk. 
+Revised: All of the 5 sampled chunks will be paragraphs of each of the documents used. Each paragraph will be made into one chunk.
+Why: Having a numerical number keeps it more measurable, and since we are measuring all 5 chunks, it gives a clear approach on what this criterion should do.
 
 **Why this target:**
 
@@ -97,7 +99,7 @@ Explanation:
 <!-- YOU WRITE THIS ONE TOO.
 
 My Criteria: 
--> Out of the 5 retrieved chunks, the top-k chunk should include the "expects" word or phrase.
+-> 
 
 
 
@@ -106,6 +108,12 @@ My Criteria:
      handles badly, about source attribution being correct rather than merely
      present — anything, as long as it names a number or an observable
      outcome. -->
+
+Original: Out of the 5 retrieved chunks, the top-k chunk should include the "expects" word or phrase.
+
+Revised: For all 5 questions, the answer the model gives contains the expects phrase.
+
+Why: The old criterion was inmesurable since some of the questions arent able to retrieve the right amount of chunks or chunks needed to answer the question. Having only the top-k chunk including the "expects" phrase wont help with some certain questions being asked when it comes to looking at multiple documents.
 
 **Why this target:**
 
