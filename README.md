@@ -380,14 +380,15 @@ I do not have enough information to answer the question about which dorms use ap
      low, and which one you'd tighten and to what.
 
      Milestone 3. -->
+At first, nothing was missed, this was due to how straightforward the questions were. Although it may say that there was one fail, the only reason it did fail was because the wording of the "expects" was off. When fixing that, all passed.
 
-At first, I had questions that were too easy to answer. This made it so all questions and there were no misses. Each question basically had a straightforward answer that was easily found in the files of the campus corpus.
+1. Question 1 says, "Which dining hall has the longest wait at lunchtime?". This question failed at retrieval. In order for this question to be answered, it has to compare all of the dining halls, which is more than what the top-k is(top-k being 4). Kestrel Commons, which is the right answer of 20-25 minutes, was not a chunk that was retrieved. The model used the available sources and answered based off those, but it left out the actual correct one.
 
-I focused on changing a few of my questions, the wording, and the expects phrases to be shorter. This way the questions could be deemed harder and find any improvements that could be needed. I also changed some of my criteria to be better measured. 
+2.  Question 3 says, "Which dorms use app-based laundry?". This question also failed at retrieval. Since the chunker splits every paragraph into a chunk and have the same title as to keep the relevance, they can be seen as pretty much equals in relevancy. This made it so other chunks take up the top-k slots, leaving out multiple chunks that contain the right answer.
 
-Question 4 ,"How many dorms let you pay for laundry with coins?", failed at the 5th criterion because of the generation by the model. In the 3 runs for this question, each ran similarly and used similar chunks to help with displaying an answer. The only difference is, when the answer was displayed, it did not contain the expects phrase, and also was partially correct or answered the question incorrectly. 
+3. Question 4 says, "How many dorms let you pay for laundry with coins?". This question failed at generation. It obtained the correct documents and sources to be able to format the answer, but in the first run it never actually considered them as both being the overall correct answer. This made it so the answer did not include the "expects" word.
 
-I wanted to see if there could be any other questions that I can change to find any possible errors, and I also found that question 5:
+
 
 ## The Improvement
 
