@@ -23,12 +23,19 @@ names a target of "4 of 5", and four of three is not a thing.
 
 QUESTIONS = [
     # {"question": "...", "expects": "..."},
-    {"question": "How much does laundry cost in Old Brewhouse?", "expects": "$1.50"},
-    {"question": "When are the walk in hours for the health center?", "expects": "8am-11am"},
-    {"question": "What is the window for dropping a class without a penalty of W on my transcript?", "expects": "First 2 weeks"},
-    {"question": "How often does the campus shuttle run on weekdays?", "expects": "Every 20 minutes"},
-    {"question": "How many hours a week is the workload for PHYS 130 Mechanics?", "expects": "7 hours"},
+    {"question": "Which dining hall has the longest wait at lunchtime?", "expects": "Kestrel Commons"},
+    {"question": "When are the walk in hours for the health center?", "expects": "8:00 am to 11:00 am"},
+    {"question": "What is the window for dropping a class without a penalty of W on my transcript?", "expects": "second week"},
+    {"question": "How many dorms let you pay for laundry with coins?", "expects": "two"},
+    {"question": "Which dorms use app-based laundry?", "expects": "Innisfree && Calder Annexe && Fenwick Court"},
 ]
+""" 
+Old Questions (Before making changes)
+Q1: How much does laundry cost in Old Brewhouse? (expects: $1.50)
+
+Q4: How often does the campus shuttle run on weekdays? (expects: Every 20 minutes)
+Q5: How many hours a week is the workload for PHYS 130 Mechanics? (expects: 7 hours)
+"""
 
 # Questions from a different world entirely. Your gate should refuse all five.
 #
